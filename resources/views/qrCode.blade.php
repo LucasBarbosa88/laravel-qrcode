@@ -16,8 +16,9 @@
 @section('scripts')
 <script type="text/javascript">
     var qrcode = new QRCode("qrcode");
+
     function makeCode() {
-        var value = "<?= route('user-data', $user_name);?>";
+        var value = "<?= route('user-details', $user_name); ?>";
         qrcode.makeCode(value);
     }
     makeCode();

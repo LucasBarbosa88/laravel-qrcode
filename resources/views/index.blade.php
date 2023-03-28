@@ -45,7 +45,7 @@
 
 @section('scripts')
 <script>
-  $("form").on("submit", function (e) {
+  $("form").on("submit", function(e) {
     var dataString = $(this).serialize();
     console.log(dataString);
     e.preventDefault();
@@ -53,21 +53,11 @@
       type: "POST",
       url: "<?= route('create-user') ?>",
       data: dataString,
-      success: function () {
+      success: function() {
         var name = document.getElementById("fname").value;
-        window.location.href = "http://localhost:8000/user/" + name; 
+        window.location.href = "http://localhost:8000/user/" + name;
       }
     });
-    
-});
-  // function handleSubmit(e) {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget)
-  //   if (response == 201) {
-      // 
-  //   } else {
-  //     alert("Dados incorretos!")
-  //   }
-  // }
+  });
 </script>
 @endsection
