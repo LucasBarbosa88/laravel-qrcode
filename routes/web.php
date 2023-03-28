@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\QrCodeController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::post('/generate', [QrCodeController::class, 'generate'])->name('generate');
+Route::get('/user/{NAME}', [QrCodeController::class, 'qrCode'])->name('userQrCode');
+Route::get('/{NAME}', [UserController::class, 'userDetails'])->name('userDetails');
