@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('/generate', [QrCodeController::class, 'generate'])->name('generate');
+Route::get('/', [QrCodeController::class, 'generate'])->name('generate');
 Route::get('/user/{NAME}', [QrCodeController::class, 'qrCode'])->name('userQrCode');
 Route::get('/{NAME}', [UserController::class, 'userDetails'])->name('userDetails');
