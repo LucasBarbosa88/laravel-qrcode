@@ -11,3 +11,5 @@ Run php artisan key:generate
 To create the tables run the following command: php artisan migrate
 
 Run the project with follow command: php artisan serve
+
+Video on youtube with project runing: https://youtu.be/PAT3ecih5GM
